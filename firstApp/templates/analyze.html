@@ -48,36 +48,17 @@
       </nav>
 
       <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Hola! welcome to TextEditor</strong> You can modify the text here.
+        <strong>Success!</strong> your text has been edited
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
 
       <div class="container">
-        <form action="/analyse" method="post"> {% csrf_token %}
-            <div class="form-group">
-              <label for="exampleFormControlTextarea1">Enter Your Text</label>
-              <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-            </div>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1" name="removepunc">
-            <label class="custom-control-label" for="customCheck1">Remove Puncuations</label>
-          </div>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck2" name="fullcap">
-            <label class="custom-control-label" for="customCheck2">Captialize</label>
-          </div>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck3" name="spaceRemover">
-            <label class="custom-control-label" for="customCheck3">SpaceRemover</label>
-          </div>
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck4" name="newline">
-            <label class="custom-control-label" for="customCheck4">NewLine Remover</label>
-          </div><br>
-          <button type="submit" class="btn btn-outline-dark">Analyse</button>
-        </form>
+            <h1>Your analyzed text -{{purpose}}</h1>
+            <p>
+                <pre> {{analyzed_text}}</pre>
+            </p>
       </div>
  
      
@@ -89,3 +70,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analzing your text</title>
+</head>
+<body>
+    
+</body>
+</html> -->
+
